@@ -1,7 +1,50 @@
 doctype html
-html
+html(lang='en')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    // Tell the browser to be responsive to screen width
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // Favicon icon
+    link(rel='icon', type='image/png', sizes='16x16', href='assets/images/favicon.png')
+    title Monster Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template
+    // Bootstrap Core CSS
+    link(href='assets/plugins/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/style.css', rel='stylesheet')
+    // You can change the theme colors from here
+    link#theme(href='css/colors/blue.css', rel='stylesheet')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+  body.fix-header.fix-sidebar.card-no-border
     block content
+    // ==============================================================
+    // All Jquery
+    // ==============================================================
+    script(src='assets/plugins/jquery/jquery.min.js')
+    // Bootstrap tether Core JavaScript
+    script(src='assets/plugins/bootstrap/js/tether.min.js')
+    script(src='assets/plugins/bootstrap/js/bootstrap.min.js')
+    // slimscrollbar scrollbar JavaScript
+    script(src='js/jquery.slimscroll.js')
+    // Wave Effects
+    script(src='js/waves.js')
+    // Menu sidebar
+    script(src='js/sidebarmenu.js')
+    // stickey kit
+    script(src='assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')
+    // Custom JavaScript
+    script(src='js/custom.min.js')
+    // ==============================================================
+    // This page plugins
+    // ==============================================================
+    // Flot Charts JavaScript
+    script(src='assets/plugins/flot/jquery.flot.js')
+    script(src='assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js')
+    script(src='js/flot-data.js')
+    // ==============================================================
+    // Style switcher
+    // ==============================================================
+    script(src='assets/plugins/styleswitcher/jQuery.style.switcher.js')
