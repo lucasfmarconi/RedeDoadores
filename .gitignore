@@ -36,6 +36,9 @@ styles/.sass-cache/*
 .sass-cache/
 *.css.map
 
+#vs code
+.code-workspace
+
 # Not working? 
 # Try: http://stackoverflow.com/questions/11451535/gitignore-not-working
 # Try: http://stackoverflow.com/questions/1139762/gitignore-file-not-ignoring
