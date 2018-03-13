@@ -1,104 +1,46 @@
+
 doctype html
-html(lang='en')
-  head
+head
     meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    // Tell the browser to be responsive to screen width
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content='')
     meta(name='author', content='')
-    // Favicon icon
-    link(rel='icon', type='image/png', sizes='16x16', href='assets/images/favicon.png')
-    title Rede Doadores
-    // Bootstrap Core CSS
-    link(href='assets/plugins/bootstrap/css/bootstrap.min.css', rel='stylesheet')
-    // Custom CSS
-    link(href='css/style.css', rel='stylesheet')
-    // You can change the theme colors from here
-    link#theme(href='css/colors/blue.css', rel='stylesheet')
-    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-    // WARNING: Respond.js doesn't work if you view the page via file://
-  body.fix-header.fix-sidebar.card-no-border
-    //
-    // CONTEUDO DA PAGINA
-    //
-    .preloader
-    svg.circular(viewbox='25 25 50 50')
-      circle.path(cx='50', cy='50', r='20', fill='none', stroke-width='2', stroke-miterlimit='10')
-    #main-wrapper
-    header.topbar
-      nav.navbar.top-navbar.navbar-toggleable-sm.navbar-light
-        .navbar-header
-          a.navbar-brand(href='index.html')
-            b
-              img.dark-logo(src='assets/images/logo-icon.png', alt='homepage')
-            span
-              img.dark-logo(src='assets/images/logo-text.png', alt='homepage')
-        .navbar-collapse
-          ul.navbar-nav.mr-auto.mt-md-0
-            li.nav-item
-              a.nav-link.nav-toggler.hidden-md-up.text-muted.waves-effect.waves-dark(href='javascript:void(0)')
-                i.ti-menu
-            li.nav-item.hidden-sm-down
-              form.app-search.p-l-20
-                input.form-control(type='text', placeholder='Search for...')
-                a.srh-btn
-                  i.ti-search
-          ul.navbar-nav.my-lg-0
-            li.nav-item.dropdown
-              a.nav-link.dropdown-toggle.text-muted.waves-effect.waves-dark(href='', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                img.profile-pic.m-r-5(src='assets/images/users/1.jpg', alt='user')
-    aside.left-sidebar
-      .scroll-sidebar
-        nav.sidebar-nav
-          ul#sidebarnav
-            li
-              a.waves-effect(href='index.html')
-                i.fa.fa-clock-o.m-r-10(aria-hidden='true')
-            li
-              a.waves-effect(href='pages-profile.html')
-                i.fa.fa-user.m-r-10(aria-hidden='true')
-            li
-              a.waves-effect(href='table-basic.html')
-                i.fa.fa-table.m-r-10(aria-hidden='true')
-            li
-              a.waves-effect(href='icon-fontawesome.html')
-                i.fa.fa-font.m-r-10(aria-hidden='true')
-            li
-              a.waves-effect(href='map-google.html')
-                i.fa.fa-globe.m-r-10(aria-hidden='true')
-            li
-              a.waves-effect(href='pages-blank.html')
-                i.fa.fa-columns.m-r-10(aria-hidden='true')
-            li
-              a.waves-effect(href='pages-error-404.html')
-                i.fa.fa-info-circle.m-r-10(aria-hidden='true')
-    block content  
-    // ==============================================================
-    // All Jquery
-    // ==============================================================
-    script(src='assets/plugins/jquery/jquery.min.js')
-    // Bootstrap tether Core JavaScript
-    script(src='assets/plugins/bootstrap/js/tether.min.js')
-    script(src='assets/plugins/bootstrap/js/bootstrap.min.js')
-    // slimscrollbar scrollbar JavaScript
-    script(src='js/jquery.slimscroll.js')
-    // Wave Effects
-    script(src='js/waves.js')
-    // Menu sidebar
-    script(src='js/sidebarmenu.js')
-    // stickey kit
-    script(src='assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')
-    // Custom JavaScript
-    script(src='js/custom.min.js')
-    // ==============================================================
-    // This page plugins
-    // ==============================================================
-    // Flot Charts JavaScript
-    script(src='assets/plugins/flot/jquery.flot.js')
-    script(src='assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js')
-    script(src='js/flot-data.js')
-    // ==============================================================
-    // Style switcher
-    // ==============================================================
-    script(src='assets/plugins/styleswitcher/jQuery.style.switcher.js')
+    title Scrolling Nav - Start Bootstrap Template
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/scrolling-nav.css', rel='stylesheet')
+    script(src='js/vue.js')    
+// Navigation
+nav#mainNav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+    .container
+        a.navbar-brand.js-scroll-trigger(href='#page-top') Start Bootstrap
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+                li.nav-item
+                    a.nav-link.js-scroll-trigger(href='#about') About
+                li.nav-item
+                    a.nav-link.js-scroll-trigger(href='#services') Services
+                li.nav-item
+                    a.nav-link.js-scroll-trigger(href='#contact') Contact
+header.bg-primary.text-white
+    .container.text-center
+        h1 Welcome to Scrolling Nav
+        p.lead A landing page template freshly redesigned for Bootstrap 4
+
+block content
+
+// Footer
+footer.py-5.bg-dark
+    .container
+        p.m-0.text-center.text-white Copyright &copy; Your Website 2017
+    // /.container
+// Bootstrap core JavaScript
+script(src='vendor/jquery/jquery.min.js')
+script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+// Plugin JavaScript
+script(src='vendor/jquery-easing/jquery.easing.min.js')
+// Custom JavaScript for this theme
+script(src='js/scrolling-nav.js')
